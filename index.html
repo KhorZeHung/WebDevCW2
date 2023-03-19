@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="includes/style.css" />
+    <script src="includes/index.js"></script>
+    <title>MemesHub</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="headerLogo">
+        <a href="index.html" id="logo">MemesHub</a>
+      </div>
+      <div class="headerNav" onclick="toggleNav('headerNav')">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <p onclick="document.getElementById('loginForm').style.display='block'">
+          Login
+        </p>
+        <a href="profile.html">Profile</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+      </div>
+    </header>
+    <div class="modal" id="loginForm">
+      <form
+        class="modal-content animate"
+        action="/action_page.php"
+        method="post"
+      >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('loginForm').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+        </div>
+
+        <div class="container">
+          <label for="Email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="Email" required />
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            required
+          />
+          <div class="center">
+            <button type="submit">Login</button>
+          </div>
+          <p class="formP">
+            No accounts? <a href="signup.html">Sign up</a> here
+          </p>
+        </div>
+      </form>
+    </div>
+    <button
+      onclick="topFunction()"
+      id="scrollTopBtn"
+      class="functionBtn"
+      title="Go to top"
+    >
+      &#8593;
+    </button>
+
+    <div class="postSec">
+      <div class="postForm">
+        <h3>Add new post</h3>
+        <label for="title">Title</label>
+        <input
+          type="text"
+          name="title"
+          placeholder="Title of the post"
+          required
+        />
+        <label for="comment">Comment</label>
+        <textarea
+          name="comment"
+          id="comment"
+          rows="3"
+          placeholder="Comment of the post"
+        ></textarea>
+        <label for="imagePost">Media (optional)</label>
+        <div class="row">
+          <input type="file" name="imagePost" />
+          <div class="center">
+            <button name="submit" onclick = "document.getElementById('loginForm').style.display='block'">Post</button>
+          </div>
+        </div>
+      </div>
+      <div class="postCard">
+        <div class="postHeader">
+          <img
+            src="src/img/lakers.jpg"
+            alt="LakersNation"
+            class="postProfile small"
+          />
+          <div class="postDetail">
+            <p><b>Lakers Won</b></p>
+            <p class="postCreatorName">@LakersShow</p>
+          </div>
+        </div>
+        <p class="postComment">Thats what im talking about</p>
+        <a href="#" class="postAlbum">#2020_Memories</a>
+        <img src="src/img/LakersWon.jfif" class="postImage" alt="Lakers Won" />
+      </div>
+      <div class="postCard">
+        <div class="postHeader">
+          <img
+            src="src/img/lakers.jpg"
+            alt="LakersNation"
+            class="postProfile small"
+          />
+          <div class="postDetail">
+            <p><b>Lakers Won</b></p>
+            <p class="postCreatorName">@LakersShow</p>
+          </div>
+        </div>
+        <p class="postComment">Thats what im talking about</p>
+        <a href="#" class="postAlbum">#2020_Memories</a>
+        <img src="src/img/LakersWon.jfif" class="postImage" alt="Lakers Won" />
+      </div>
+      <div class="postCard">
+        <div class="postHeader">
+          <img
+            src="src/img/lakers.jpg"
+            alt="LakersNation"
+            class="postProfile small"
+          />
+          <div class="postDetail">
+            <p><b>Lakers Won</b></p>
+            <p class="postCreatorName">@LakersShow</p>
+          </div>
+        </div>
+        <p class="postComment">Thats what im talking about</p>
+        <a href="#" class="postAlbum">#2020_Memories</a>
+        <img src="src/img/LakersWon.jfif" class="postImage" alt="Lakers Won" />
+      </div>
+    </div>
+  </body>
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      let mybutton = document.getElementById("scrollTopBtn");
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
+</html>
