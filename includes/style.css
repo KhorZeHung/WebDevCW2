@@ -493,3 +493,37 @@ input[type="file"]::-webkit-file-upload-button {
     0.783
   );
 }
+
+.dropDown{
+  background-color: rgb(230, 230, 230);
+  position: absolute;
+  display: none;
+  width: 170px;
+}
+
+.show{
+  display: block;
+}
+.dropDownBtn{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+  width: 140px;
+  margin: 0;
+  border-radius:0;
+}
+
+.albumCheckBox{
+  padding: 10px;
+}
+
+.albumCheckBox:hover{
+  background-color: rgb(190, 190, 190);
+}
+
+#doneBtn button{
+  padding: 2px;
+  margin: 3px;
+}

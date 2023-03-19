@@ -90,9 +90,36 @@
         ></textarea>
         <label for="imagePost">Media (optional)</label>
         <div class="row">
-          <input type="file" name="imagePost" />
+          <div>
+            <input type="file" name="imagePost" />
+            <button onclick="toggleDropDown()" class="dropDownBtn">
+              &#9660; Album 
+            </button>
+            <div id="albumDropDown" class="dropDown">
+              <div class="albumCheckBox">
+                <input type="checkbox" name="1" />
+                <label for="1">2020Memories</label>
+              </div>
+              <div class="albumCheckBox">
+                <input type="checkbox" name="1" />
+                <label for="1">2020Memories</label>
+              </div>
+              <div class="albumCheckBox">
+                <input type="checkbox" name="1" />
+                <label for="1">2020Memories</label>
+              </div>
+              <div id="doneBtn" class="center">
+                <button onclick="toggleDropDown()">Done</button>
+              </div>
+            </div>
+          </div>
           <div class="center">
-            <button name="submit" onclick = "document.getElementById('loginForm').style.display='block'">Post</button>
+            <button
+              name="submit"
+              onclick="document.getElementById('loginForm').style.display='block'"
+            >
+              Post
+            </button>
           </div>
         </div>
       </div>

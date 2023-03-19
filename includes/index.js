@@ -37,4 +37,7 @@ window.onload = () => {
   }
 };
 
-
+var toggleDropDown = () => {
+  var dropDownMenu = document.getElementById("albumDropDown");
+  dropDownMenu.classList.toggle("show");
+};

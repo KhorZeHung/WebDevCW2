@@ -5,199 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="try.css" />
-    <script src="includes/index.js"></script>
-    <title>MemesHub</title>
+    <title>Document</title>
+    <script>
+      var toggleDropDown = () => {
+        var dropDownMenu = document.getElementById("albumDropDown");
+        dropDownMenu.classList.toggle("show");
+      };
+
+
+    </script>
   </head>
-
   <body>
-    <header>
-      <div class="headerLogo">
-        <a href="index.html" id="logo">MemesHub</a>
+    <button onclick="toggleDropDown()" class="dropDownBtn">
+      &#9660; Album (optional)
+    </button>
+    <div id="albumDropDown" class="dropDown">
+      <div class="albumCheckBox">
+        <input type="checkbox" name="1" />
+        <label for="1">2020Memories</label>
       </div>
-      <div class="headerNav" onclick="toggleNav('headerNav')">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+      <div class="albumCheckBox">
+        <input type="checkbox" name="1" />
+        <label for="1">2020Memories</label>
       </div>
-      <div id="mySidenav" class="sidenav">
-        <p onclick="document.getElementById('loginForm').style.display='block'">
-          Login
-        </p>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+      <div class="albumCheckBox">
+        <input type="checkbox" name="1" />
+        <label for="1">2020Memories</label>
       </div>
-    </header>
-
-    <div id="addAlbum" class="modal">
-      <form class="modal-content animate" method="post">
-        <div class="imgcontainer">
-          <span
-            onclick="document.getElementById('addAlbum').style.display='none'"
-            class="close"
-            title="Close Modal"
-            >&times;</span
-          >
-        </div>
-
-        <div class="container">
-          <h3>New Album</h3>
-          <br />
-          <div class="center">
-            <label for="albumProfile">Front Picture (optional)</label>
-            <input type="file" name="albumProfile" />
-            <input
-              type="text"
-              placeholder="Enter Album's name"
-              name="albumName"
-              required
-            />
-            <button type="addAlbum">Add</button>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <div class="column">
-      <div class="personalInfoSec">
-        <img
-          src="src/img/lakers.jpg"
-          alt="profile picture"
-          class="postProfile big"
-        />
-        <p class="profileP">LakersNation</p>
-      </div>
-      <div class="profileAlbumSec">
-        <a href="#">
-          <div class="albumCard">
-            <img
-              src="src/img/lakers.jpg"
-              alt="album"
-              class="postProfile small"
-            />
-            <p class="postAlbum">#2020_Memories</p>
-          </div>
-        </a>
-        <a href="#">
-          <div class="albumCard">
-            <img
-              src="src/img/lakers.jpg"
-              alt="album"
-              class="postProfile small"
-            />
-            <p class="postAlbum">#2020_Memories</p>
-          </div>
-        </a>
-        <a href="#">
-          <div class="albumCard">
-            <img
-              src="src/img/lakers.jpg"
-              alt="album"
-              class="postProfile small"
-            />
-            <p class="postAlbum">#2020_Memories</p>
-          </div>
-        </a>
-        <a href="#">
-          <div class="albumCard">
-            <img
-              src="src/img/lakers.jpg"
-              alt="album"
-              class="postProfile small"
-            />
-            <p class="postAlbum">#2020_Memories</p>
-          </div>
-        </a>
-        <a href="#">
-          <div class="albumCard">
-            <img
-              src="src/img/lakers.jpg"
-              alt="album"
-              class="postProfile small"
-            />
-            <p class="postAlbum">#2020_Memories</p>
-          </div>
-        </a>
-        <a href="#">
-          <div class="albumCard">
-            <img
-              src="src/img/lakers.jpg"
-              alt="album"
-              class="postProfile small"
-            />
-            <p class="postAlbum">#2020_Memories</p>
-          </div>
-        </a>
-        <div class="albumCard">
-          <button
-            class="functionBtn"
-            onclick="document.getElementById('addAlbum').style.display='block'"
-          >
-            &plus;
-          </button>
-        </div>
-      </div>
-      <div class="postSec2">
-        <div class="postCard">
-          <div class="postHeader">
-            <img
-              src="src/img/lakers.jpg"
-              alt="LakersNation"
-              class="postProfile small"
-            />
-            <div class="postDetail">
-              <p><b>Lakers Won</b></p>
-              <p class="postCreatorName">@LakersShow</p>
-            </div>
-          </div>
-          <p class="postComment">Thats what im talking about</p>
-          <a href="#" class="postAlbum">#2020_Memories</a>
-          <img
-            src="src/img/LakersWon.jfif"
-            class="postImage"
-            alt="Lakers Won"
-          />
-        </div>
-        <div class="postCard">
-          <div class="postHeader">
-            <img
-              src="src/img/lakers.jpg"
-              alt="LakersNation"
-              class="postProfile small"
-            />
-            <div class="postDetail">
-              <p><b>Lakers Won</b></p>
-              <p class="postCreatorName">@LakersShow</p>
-            </div>
-          </div>
-          <p class="postComment">Thats what im talking about</p>
-          <a href="#" class="postAlbum">#2020_Memories</a>
-          <img
-            src="src/img/LakersWon.jfif"
-            class="postImage"
-            alt="Lakers Won"
-          />
-        </div>
-        <div class="postCard">
-          <div class="postHeader">
-            <img
-              src="src/img/lakers.jpg"
-              alt="LakersNation"
-              class="postProfile small"
-            />
-            <div class="postDetail">
-              <p><b>Lakers Won</b></p>
-              <p class="postCreatorName">@LakersShow</p>
-            </div>
-          </div>
-          <p class="postComment">Thats what im talking about</p>
-          <a href="#" class="postAlbum">#2020_Memories</a>
-          <img
-            src="src/img/LakersWon.jfif"
-            class="postImage"
-            alt="Lakers Won"
-          />
-        </div>
+      <div id="doneBtn">
+        <button onclick = "toggleDropDown()">Done</button>
       </div>
     </div>
   </body>
