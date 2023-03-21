@@ -5,36 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="try.css" />
-    <title>Document</title>
-    <script>
-      var toggleDropDown = () => {
-        var dropDownMenu = document.getElementById("albumDropDown");
-        dropDownMenu.classList.toggle("show");
-      };
-
-
-    </script>
+    <title>MemesHub</title>
   </head>
   <body>
-    <button onclick="toggleDropDown()" class="dropDownBtn">
-      &#9660; Album (optional)
-    </button>
-    <div id="albumDropDown" class="dropDown">
-      <div class="albumCheckBox">
-        <input type="checkbox" name="1" />
-        <label for="1">2020Memories</label>
+    <header>
+      <div class="headerLogo">
+        <a href="index.html" id="logo">MemesHub</a>
       </div>
-      <div class="albumCheckBox">
-        <input type="checkbox" name="1" />
-        <label for="1">2020Memories</label>
+      <div class="row">
+        <div class="headerSearch row" style="justify-content: flex-end">
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="&#x1F50E;&#xFE0E;"
+            onclick="toggleDropDown('searchResult')"
+          />
+          <div class="dropDown" id="searchResult" style="width: 70vw">
+            <p>Memories2020</p>
+            <p>Memories2020</p>
+            <p>Memories2020</p>
+            <p>Memories2020</p>
+          </div>
+        </div>
+        <div class="headerNav">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+          <p onclick="$('#loginForm').css('display', 'block')">Login</p>
+          <a href="profile.html">Profile</a>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+        </div>
       </div>
-      <div class="albumCheckBox">
-        <input type="checkbox" name="1" />
-        <label for="1">2020Memories</label>
-      </div>
-      <div id="doneBtn">
-        <button onclick = "toggleDropDown()">Done</button>
-      </div>
-    </div>
+    </header>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="includes/index.js"></script>
 </html>

@@ -65,6 +65,41 @@ header a {
   font-size: 30px;
 }
 
+.headerSearch {
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+#searchBar {
+  height: 37px;
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 10px !important;
+  box-sizing: border-box;
+  font-size: 16px;
+  max-width: 37px;
+  padding: 0;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 18.5px;
+  padding: 5px 8.5px;
+  color: white;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#searchBar:hover,
+#searchBar:focus {
+  position: inline;
+  margin-left: 30px;
+  max-width: 300px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
 .bar1,
 .bar2,
 .bar3 {
@@ -135,6 +170,10 @@ header a {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.openSideNav {
+  width: 200px;
 }
 
 @media screen and (max-height: 450px) {
@@ -239,7 +278,7 @@ textarea {
   width: 100%;
 }
 
-.column{
+.column {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -361,7 +400,7 @@ span.psw {
   }
 }
 
-#signupForm {
+.formSize {
   width: 250px;
   margin: 100px auto 0;
   padding: 20px;
@@ -453,9 +492,8 @@ span.psw {
 input[type="file"] {
   margin: 10px auto;
   width: 90%;
-  min-width: 190px;
+  min-width: 150px;
   border: solid 1px rgb(84, 84, 84);
-  border-radius: 20px;
 }
 input[type="file"]::-webkit-file-upload-button {
   border: none;
@@ -486,44 +524,98 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .functionBtn:hover {
-  background-color: rgba(
-    32,
-    32,
-    32,
-    0.783
-  );
+  background-color: rgba(32, 32, 32, 0.783);
 }
 
-.dropDown{
+.dropDown {
   background-color: rgb(230, 230, 230);
   position: absolute;
   display: none;
-  width: 170px;
+  max-width: 280px;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 2;
 }
 
-.show{
+.show {
   display: block;
 }
-.dropDownBtn{
+.dropDownBtn {
   background-color: black;
   border: none;
   color: white;
   padding: 5px;
   font-size: 12px;
-  width: 140px;
+  width: 40px;
+  height: 30px;
   margin: 0;
-  border-radius:0;
+  border-radius: 0;
 }
 
-.albumCheckBox{
+.albumRadio {
   padding: 10px;
 }
 
-.albumCheckBox:hover{
+.albumRadio:hover {
   background-color: rgb(190, 190, 190);
 }
 
-#doneBtn button{
+#doneBtn button {
   padding: 2px;
   margin: 3px;
+}
+
+.postModify {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.postModify:hover,
+.postModify:active {
+  background-color: rgba(206, 206, 206, 0.532);
+}
+
+#userModify {
+  top: 30px;
+  right: 15px;
+}
+
+.dropDown p,
+.dropDown a {
+  font-size: 15px;
+  padding: 5px;
+}
+
+.dropDown p:hover,
+.dropDown a:hover {
+  background-color: rgb(185, 185, 185);
+  cursor: pointer;
+}
+
+#postSubmit {
+  width: 100px;
+}
+
+#albumValue {
+  border: 1px solid black;
+  height: 28px;
+  font-size: 13px;
+}
+
+#searchResult {
+  top: 55px;
+  right: 100px;
+}
+
+.deleteLastMedia {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 0 5px 8px;
+  justify-content: flex-start;
 }

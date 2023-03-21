@@ -4,36 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="try.css" />
-    <script src="includes/index.js"></script>
+    <link rel="stylesheet" href="includes/style.css" />
     <title>MemesHub</title>
   </head>
-
   <body>
     <header>
       <div class="headerLogo">
         <a href="index.html" id="logo">MemesHub</a>
       </div>
-      <div class="headerNav" onclick="toggleNav('headerNav')">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-      <div id="mySidenav" class="sidenav">
-        <p onclick="document.getElementById('loginForm').style.display='block'">
-          Login
-        </p>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+      <div class="row">
+        <div class="headerSearch row" style="justify-content: flex-end">
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="&#x1F50E;&#xFE0E;"
+            onclick="toggleDropDown('searchResult')"
+          />
+          <div class="dropDown" id="searchResult" style="width: 70vw">
+            <p>Memories2020</p>
+            <p>Memories2020</p>
+            <p>Memories2020</p>
+            <p>Memories2020</p>
+          </div>
+        </div>
+        <div class="headerNav">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+          <p onclick="$('#loginForm').css('display', 'block')">Login</p>
+          <a href="profile.html">Profile</a>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+        </div>
       </div>
     </header>
-
+    <button id="scrollTopBtn" class="functionBtn" title="Go to top">
+      &#8593;
+    </button>
     <div id="addAlbum" class="modal">
       <form class="modal-content animate" method="post">
         <div class="imgcontainer">
           <span
-            onclick="document.getElementById('addAlbum').style.display='none'"
+            onclick="$('#addAlbum').css('display', 'none')"
             class="close"
             title="Close Modal"
             >&times;</span
@@ -128,10 +142,10 @@
             <p class="postAlbum">#2020_Memories</p>
           </div>
         </a>
-        <div class="albumCard">
+        <div class="albumCard" style="justify-content: flex-start">
           <button
             class="functionBtn"
-            onclick="document.getElementById('addAlbum').style.display='block'"
+            onclick=" $('#addAlbum').css('display', 'block')"
           >
             &plus;
           </button>
@@ -201,4 +215,6 @@
       </div>
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="includes/index.js"></script>
 </html>
